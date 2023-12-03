@@ -1,0 +1,18 @@
+// breakpoints
+$desktop-small: 1200px;
+$tablet: 992px;
+$tablet-small: 768px;
+$mobile: 576px;
+$mobile-sm: 320px;
+
+:root {
+  // 300 400 500 600
+  --ff-h: "Heebo", sans-serif;
+  --ff-s: "Smooch", cursive;
+  --transition: 0.3s all ease-in-out;
+  --Black: black;
+  --White: white;
+  --Primary: #5b6ceb;
+  --Copyright-bg: #5362d8;
+  // fw fs/lh var(ff)
+}

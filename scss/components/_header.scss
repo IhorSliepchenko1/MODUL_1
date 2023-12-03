@@ -1,0 +1,86 @@
+.header {
+  margin-top: 17rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+
+  &__logo {
+    z-index: 10;
+  }
+
+  &__ul {
+    display: flex;
+    align-items: center;
+    gap: 35rem;
+
+    // burger
+    @include tablet-small {
+      position: fixed;
+      width: 100%;
+      height: 50%;
+      flex-direction: column;
+      left: 0;
+      top: 0;
+      justify-content: center;
+      transform: translateY(-120%);
+      transition: var(--transition);
+      background-color: var(--White);
+      gap: 25rem;
+    }
+
+    &._active {
+      transform: translateY(0);
+      z-index: 9;
+    }
+  }
+
+  .icon-close {
+    position: absolute;
+    top: 40rem;
+    right: 20rem;
+  }
+  &__a {
+    color: var(--Black);
+    position: relative;
+    font-size: 20rem;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 0%;
+      background-color: var(--Primary);
+      height: 2px;
+      bottom: -5px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: var(--transition);
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+
+    &._active {
+      color: var(--Primary);
+      &::before {
+        width: 35px;
+      }
+    }
+  }
+}
+
+.icon-menu,
+.icon-close {
+  cursor: pointer;
+  display: none;
+  color: var(--Primary);
+
+  @include tablet-small {
+    display: inline-block;
+    font-size: 50rem;
+  }
+}

@@ -1,0 +1,43 @@
+html {
+  font-size: 1px;
+
+  @include tablet {
+    font-size: 0.95px;
+  }
+
+  @include tablet-small {
+    font-size: 0.8px;
+  }
+
+  @include mobile {
+    font-size: 0.7px;
+  }
+}
+
+body {
+  font-family: var(--ff-h);
+  font-size: 16rem;
+  margin: 0;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+.wrapper {
+  margin-inline: auto;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 0 20px;
+  margin-inline: auto;
+  width: 100%;
+}
