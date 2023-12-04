@@ -2,6 +2,7 @@
   position: relative;
   padding: 114rem 0;
   background: #5362d8a5;
+
   @include tablet-small {
     padding: 0;
   }
@@ -57,7 +58,7 @@
       background-color: var(--Grey-inp);
       font-weight: 300;
       color: var(--Grey-inp-txt);
-      font-size: 14px;
+      font-size: 14rem;
 
       &::placeholder {
         color: var(--Grey-inp-txt);
@@ -69,7 +70,7 @@
       margin-bottom: 20px;
       color: var(--Primary);
       font-weight: 400;
-      font-size: 22px;
+      font-size: 22rem;
     }
 
     &__number {
@@ -87,6 +88,14 @@
       background-size: 5px 5px, 5px 5px;
       background-repeat: no-repeat;
       appearance: none;
+
+      @include tablet-small {
+        background-image: none;
+        background-position: inherit;
+        background-size: auto;
+        background-repeat: repeat;
+        appearance: auto;
+      }
     }
 
     &__button {
@@ -100,8 +109,8 @@
       cursor: pointer;
       color: var(--White);
       font-weight: 400;
-      font-size: 17px;
-      padding: 10px 45px;
+      font-size: 17rem;
+      padding: 10rem 45rem;
       border-radius: 7px;
       border: 1px solid transparent;
       transition: var(--transition);
@@ -132,6 +141,9 @@
     font-weight: 600;
     font-size: 40px;
     max-width: 370px;
+    @include tablet-small {
+      font-size: 30px;
+    }
   }
   &__subtitle {
     font-family: var(--ff-s);
