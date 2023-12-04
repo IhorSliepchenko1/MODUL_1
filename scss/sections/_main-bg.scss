@@ -1,0 +1,149 @@
+.main-bg {
+  position: relative;
+  padding: 114rem 0;
+  background: #5362d8a5;
+  @include tablet-small {
+    padding: 0;
+  }
+  &__screen {
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    top: 0;
+
+    @include tablet-small {
+      object-fit: none;
+      background: #7480e6c4;
+    }
+  }
+  .bg {
+    display: flex;
+    gap: 100px;
+    justify-content: flex-end;
+
+    @include tablet-small {
+      display: grid;
+      justify-content: center;
+      margin: 40px 0;
+      gap: 0;
+    }
+  }
+  .form-container {
+    display: grid;
+    justify-content: center;
+  }
+  .form {
+    padding: 30px;
+    max-width: 250px;
+    background-color: var(--White);
+    border-radius: 20px;
+    display: grid;
+    justify-content: center;
+
+    @include tablet-small {
+      margin-top: 40px;
+      max-width: auto;
+      text-align: center;
+    }
+
+    &__input,
+    &__select {
+      padding: 10px;
+      width: 200rem;
+      border-radius: 7px;
+      border: 0;
+      background-color: var(--Grey-inp);
+      font-weight: 300;
+      color: var(--Grey-inp-txt);
+      font-size: 14px;
+
+      &::placeholder {
+        color: var(--Grey-inp-txt);
+        font-weight: 300;
+      }
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      color: var(--Primary);
+      font-weight: 400;
+      font-size: 22px;
+    }
+
+    &__number {
+      margin: 12px 0;
+    }
+
+    &__select {
+      background-image: linear-gradient(
+          45deg,
+          transparent 50%,
+          rgba(68, 65, 65, 0.845) 50%
+        ),
+        linear-gradient(135deg, rgba(68, 65, 65, 0.845) 50%, transparent 50%);
+      background-position: calc(100% - 12px), calc(100% - 7px), 100% 0;
+      background-size: 5px 5px, 5px 5px;
+      background-repeat: no-repeat;
+      appearance: none;
+    }
+
+    &__button {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__btn {
+      margin-top: 20rem;
+      background: var(--Primary);
+      cursor: pointer;
+      color: var(--White);
+      font-weight: 400;
+      font-size: 17px;
+      padding: 10px 45px;
+      border-radius: 7px;
+      border: 1px solid transparent;
+      transition: var(--transition);
+
+      &:hover {
+        background: var(--White);
+        color: var(--Primary);
+        border: 1px solid var(--Primary);
+      }
+    }
+  }
+
+  &__text {
+    margin-right: 75rem;
+    @include tablet-small {
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+    @include tablet-small {
+      text-align: center;
+    }
+  }
+
+  &__title {
+    margin-top: 40rem;
+    color: var(--White);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 40px;
+    max-width: 370px;
+  }
+  &__subtitle {
+    font-family: var(--ff-s);
+    color: var(--White);
+    font-weight: 300;
+    margin-top: 35rem;
+    max-width: 203px;
+    font-size: 21px;
+    line-height: 30px;
+    @include tablet-small {
+      text-align: center;
+      margin-inline: auto;
+    }
+  }
+}

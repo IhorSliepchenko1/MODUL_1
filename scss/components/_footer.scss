@@ -1,7 +1,8 @@
 .footer {
   background: var(--Primary);
+
   @include mobile-sm {
-    padding-bottom: 100px;
+    padding: 40px 0 200px 0;
   }
 
   &__content {
@@ -10,7 +11,7 @@
     justify-content: space-between;
 
     @include tablet-small {
-      display: grid;
+      flex-direction: column;
     }
 
     @include mobile-sm {
@@ -38,7 +39,7 @@
     font-weight: 300;
     font-size: 15px;
     margin-bottom: 40rem;
-
+    line-height: 24px;
     @include tablet-small {
       max-width: none;
     }
@@ -51,14 +52,22 @@
     @include tablet-small {
       display: none;
     }
+
+    img {
+      transition: var(--transition);
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
   }
 
   &__socials-tablet {
     display: none;
 
     @include tablet-small {
-      display: block;
+      display: flex;
       margin: 40px 0 50px 0;
+      gap: 9px;
     }
   }
 
@@ -66,11 +75,20 @@
   &__info-a {
     color: var(--White);
     font-weight: 300;
+    transition: var(--transition);
+    &:hover {
+      color: var(--Black);
+    }
   }
 
   &__img {
     width: 25px;
     height: 25px;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
   }
 
   &__info {
