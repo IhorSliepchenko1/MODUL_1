@@ -1,0 +1,134 @@
+.price {
+  position: relative;
+  padding: 115rem 0;
+  background: #f4f4f4c4;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet {
+      display: grid;
+      justify-content: center;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__screen {
+    position: absolute;
+    z-index: 1;
+    object-fit: cover;
+    bottom: 0;
+    right: 0;
+  }
+  &__card {
+    position: relative;
+    z-index: 2;
+    max-width: 320rem;
+
+    @include tablet {
+      &:last-child {
+        position: relative;
+        right: -175rem;
+
+        @include mobile {
+          position: inherit;
+        }
+      }
+    }
+
+    @include mobile {
+      margin-inline: auto;
+    }
+  }
+
+  &__value-slot {
+    display: flex;
+    background: var(--Primary);
+    padding: 35rem 85rem;
+    justify-content: center;
+    color: var(--White);
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__value {
+    font-size: 50rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    span {
+      font-size: 30rem;
+    }
+  }
+
+  &__period {
+    font-size: 15rem;
+    display: flex;
+    align-items: flex-end;
+    text-transform: uppercase;
+    padding-bottom: 7px;
+    font-weight: 500;
+  }
+
+  &__btn {
+    padding: 10px 45px;
+    background: var(--Primary);
+    border-radius: 25px;
+    color: var(--White);
+    text-align: center;
+    margin-top: 25px;
+    border: 1px solid transparent;
+    transition: var(--transition);
+
+    &:hover {
+      background: var(--White);
+      color: var(--Primary);
+      border: 1px solid var(--Primary);
+    }
+  }
+}
+
+.info-time {
+  padding: 50px 0;
+  text-align: center;
+  background: var(--White);
+  border-radius: 0 0 10px 10px;
+
+  &__ul {
+    display: grid;
+    gap: 30px;
+    margin-bottom: 55px;
+  }
+
+  &__li {
+    text-transform: uppercase;
+    position: relative;
+    color: var(--Card-txt);
+
+    &:nth-child(2) {
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        height: 1px;
+        width: 50%;
+        position: absolute;
+        background-color: rgba(189, 186, 186, 0.767);
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &::before {
+        top: -15px;
+      }
+
+      &::after {
+        bottom: -15px;
+      }
+    }
+  }
+}
