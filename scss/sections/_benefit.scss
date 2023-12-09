@@ -1,8 +1,17 @@
 .benefit {
-  background: var(--Primary);
+  position: relative;
   padding: 100px 0;
+  background: #5362d8a5;
 
-  
+  &__screen {
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    top: 0;
+
+  }
   .benefit-block {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
