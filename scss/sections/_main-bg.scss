@@ -139,10 +139,10 @@
     color: var(--White);
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 40rem;
     max-width: 370px;
     @include tablet-small {
-      font-size: 30px;
+      font-size: 30rem;
     }
   }
   &__subtitle {

@@ -1,0 +1,104 @@
+.swiper-section {
+  display: flex;
+  justify-content: center;
+  padding: 150rem 15px;
+
+  @include tablet {
+    display: grid;
+    padding: 100rem 15px;
+  }
+
+  &__info {
+    max-width: 450rem;
+    margin-right: 50px;
+
+    @include tablet {
+      margin-right: 0;
+      margin-inline: auto;
+      margin-bottom: 30px;
+    }
+
+    @include tablet {
+      max-width: 350rem;
+    }
+  }
+
+  &__title {
+    color: var(--Primary);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 25rem;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    font-weight: 400;
+    line-height: 22rem;
+  }
+}
+
+.swiper {
+  max-width: 600rem;
+  text-align: center;
+
+  @include tablet {
+    max-width: 400rem;
+  }
+}
+
+.material-icons {
+  color: var(--Primary);
+}
+
+.next,
+.prev {
+  max-width: 60rem;
+  max-height: 60rem;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--White);
+  border-radius: 50%;
+  cursor: pointer;
+
+  @include tablet {
+    max-width: 50rem;
+    max-height: 50rem;
+  }
+
+  @include mobile {
+    max-width: 40rem;
+    max-height: 40rem;
+  }
+}
+
+.slot {
+  display: flex;
+  align-items: center;
+
+  @include desktop-small {
+    max-width: 500rem;
+  }
+}
+
+.next {
+  right: 5%;
+  position: relative;
+  z-index: 2;
+  @include tablet {
+    font-size: 17rem;
+  }
+}
+
+.prev {
+  left: 5%;
+  position: relative;
+  z-index: 2;
+  @include tablet {
+    font-size: 17rem;
+  }
+}

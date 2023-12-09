@@ -15,6 +15,11 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
     <title>Yoga</title>
   </head>
 
@@ -247,7 +252,45 @@
           </div>
         </section>
 
-        <!-- SLIDER -->
+        <section class="swiper-section">
+          <div class="swiper-section__info">
+            <h3 class="swiper-section__title">About us</h3>
+            <p class="swiper-section__desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              est fugit soluta possimus atque porro maxime a molestiae odio
+              voluptas optio, culpa molestias ipsa. Nihil, sapiente ab! Deserunt
+              voluptatibus, eius delectus culpa illum sit, voluptas laboriosam
+              nam dolores commodi voluptatem labore sapiente. Necessitatibus,
+              minima eveniet? Nobis ullam totam non quibusdam.
+            </p>
+          </div>
+
+          <div class="slot">
+            <div class="prev">
+              <span class="material-icons">
+                arrow_back_ios_new
+              </span>
+            </div>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./img/swiper.jpg" alt="swiper" class="swiper-img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/swiper.jpg" alt="swiper" class="swiper-img" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./img/swiper.jpg" alt="swiper" class="swiper-img" />
+                </div>
+              </div>
+            </div>
+            <div class="next">
+              <span class="material-icons">
+                arrow_forward_ios
+              </span>
+            </div>
+          </div>
+        </section>
 
         <section class="benefit">
           <div class="benefit-block container">
@@ -344,35 +387,37 @@
         <section class="price">
           <img src="./img/bg-03.jpg" alt="bg" class="price__screen" />
           <div class="price__container container">
-            <div class="price__card">
-              <div class="price__value-slot">
-                <div class="price__value"><span>$</span>&nbsp;49</div>
-                <div class="price__period">/ month</div>
+            <div class="price-block">
+              <div class="price__card">
+                <div class="price__value-slot">
+                  <div class="price__value"><span>$</span>&nbsp;49</div>
+                  <div class="price__period">/ month</div>
+                </div>
+
+                <div class="info-time">
+                  <ul class="info-time__ul">
+                    <div class="info-time__li">entry date: mon - fri</div>
+                    <div class="info-time__li">entry time: 8a.m - 8p.m</div>
+                    <div class="info-time__li">nutrition advicer: no</div>
+                  </ul>
+                  <a href="/" class="price__btn">Buy no</a>
+                </div>
               </div>
 
-              <div class="info-time">
-                <ul class="info-time__ul">
-                  <div class="info-time__li">entry date: mon - fri</div>
-                  <div class="info-time__li">entry time: 8a.m - 8p.m</div>
-                  <div class="info-time__li">nutrition advicer: no</div>
-                </ul>
-                <a href="/" class="price__btn">Buy no</a>
-              </div>
-            </div>
+              <div class="price__card">
+                <div class="price__value-slot">
+                  <div class="price__value"><span>$</span>&nbsp;69</div>
+                  <div class="price__period">/ month</div>
+                </div>
 
-            <div class="price__card">
-              <div class="price__value-slot">
-                <div class="price__value"><span>$</span>&nbsp;69</div>
-                <div class="price__period">/ month</div>
-              </div>
-
-              <div class="info-time">
-                <ul class="info-time__ul">
-                  <div class="info-time__li">entry date: mon - fri</div>
-                  <div class="info-time__li">entry time: 8a.m - 8p.m</div>
-                  <div class="info-time__li">nutrition advicer: yes</div>
-                </ul>
-                <a href="/" class="price__btn">Buy nov</a>
+                <div class="info-time">
+                  <ul class="info-time__ul">
+                    <div class="info-time__li">entry date: mon - fri</div>
+                    <div class="info-time__li">entry time: 8a.m - 8p.m</div>
+                    <div class="info-time__li">nutrition advicer: yes</div>
+                  </ul>
+                  <a href="/" class="price__btn">Buy nov</a>
+                </div>
               </div>
             </div>
 
@@ -574,6 +619,8 @@
         </div>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="script.js"></script>
   </body>
 </html>

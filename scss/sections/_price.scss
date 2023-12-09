@@ -1,21 +1,23 @@
 .price {
   position: relative;
   padding: 115rem 0;
-  background: #f4f4f4c4;
 
   &__container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 30px;
 
     @include tablet {
       display: grid;
-      justify-content: center;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
     }
+  }
+
+  .price-block {
+    display: flex;
+    gap: 30px;
 
     @include mobile {
-      grid-template-columns: 1fr;
+      display: grid;
     }
   }
 
@@ -27,23 +29,13 @@
     right: 0;
   }
   &__card {
-    position: relative;
     z-index: 2;
     max-width: 320rem;
 
     @include tablet {
       &:last-child {
-        position: relative;
-        right: -175rem;
-
-        @include mobile {
-          position: inherit;
-        }
+        margin-inline: auto;
       }
-    }
-
-    @include mobile {
-      margin-inline: auto;
     }
   }
 
